@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Sphere Office</title>
+	</head>
+	<body>
+		<style>
+		.highlight {
+			color: #ff007f; 
+		}
+		</style>
+		<link rel="stylesheet" href="css/table.css">
+		<link rel="stylesheet" href="css/background.css">
+		<div class="block-element">
+			<h1>Sphere|浑身工作室</h1>
+		</div>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;浑身工作室是一个广泛涉猎网络服务内容的工作室，目前处于初步试营业阶段。浑身工作室坚持“人本、坚顽、得偿”的理念，为每一位单主提供最优质的服务。</p>
+		<h2>代肝模式:</h2>
+		<div class="block-element">
+		    <table>
+		        <thead>
+		            <tr>
+		                <th>Now' Boost|急行军</th>
+		                <th>Saint Ⅲ|谐甂圜</th>
+		                <th>Tase Block|垔消</th>
+						<th>The Great Chase|大通票</th>
+		            </tr>
+		        </thead>
+		        <tbody>
+		            <tr>
+		                <td>·	最快的速度</td>
+		                <td>·	质量无忧</td>
+		                <td>·	全程直播</td>
+						<td>·	服务<span class="hili-char">全</span>解锁</td>
+		            </tr>
+		            <tr>
+		                <td>·	最经济的价格</td>
+		                <td>·	私聊指导</td>
+		                <td>·	交流频道解锁</td>
+						<td>·	包月额外优惠</td>
+		            </tr>
+					<tr>
+                <td></td> 
+                <td>· 附赠Immor帅照一张</td>
+                <td></td>
+                <td></td>
+					</tr>
+				<script>
+					var thElements = document.querySelectorAll('th');
+				
+					thElements.forEach(function(th) {
+						th.addEventListener('mouseover', function() {
+							var index = th.cellIndex;
+							var rows = document.querySelectorAll('tbody tr');
+							rows.forEach(function(row) {
+								var td = row.children[index];
+								if (td) {
+									var hiliChars = td.querySelectorAll('.hili-char');
+									for (var i = 0; i < hiliChars.length; i++) {
+										hiliChars[i].classList.add('highlight');
+									}
+								}
+							});
+						});
+						th.addEventListener('mouseout', function() {
+							var rows = document.querySelectorAll('tbody tr');
+							rows.forEach(function(row) {
+								var td = row.children[th.cellIndex];
+								if (td) {
+									var hiliChars = td.querySelectorAll('.hili-char');
+									for (var i = 0; i < hiliChars.length; i++) {
+										hiliChars[i].classList.remove('highlight');
+									}
+								}
+							});
+						});
+					});
+				</script>
+			</table>
+		</div>
+			<p><a href="Substitute.html">点击这里</a>查看价目和服务内容</p>
+	</body>
+</html>
